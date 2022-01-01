@@ -1,0 +1,17 @@
+---
+
+- name: Add the user 'shek' with a zsh shell
+  user:
+    name: shek
+    shell: /bin/bash
+    groups: admins
+    append: yes
+    create_home: true
+
+
+- name: Create a 4096-bit SSH key for user shek in ~shek/.ssh/id_rsa
+  user:
+    name: shek
+    generate_ssh_key: yes
+    ssh_key_bits: 4096
+    ssh_key_file: .ssh/id_rsa
