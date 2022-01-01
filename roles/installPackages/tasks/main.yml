@@ -12,6 +12,7 @@
 - name: Install a list of packages
     apt:
       pkg:
+        - stow
         - borgbackup
         - zip
         - tree
