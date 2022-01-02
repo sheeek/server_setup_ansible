@@ -22,4 +22,4 @@
     dest: "{{ dotfilePath }}"
 
 - name: stow the relevant files
-  ansible.builtin.shell: cd && cd .dotfiles && stow vim
+  ansible.builtin.shell: cd && cd .dotfiles && stow vim && stow aliases
