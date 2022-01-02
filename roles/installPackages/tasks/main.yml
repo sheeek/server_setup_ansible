@@ -1,33 +1,33 @@
 ---
 
 - name: apt update
-    action: apt update_cache=yes
+  action: apt update_cache=yes
 
 - name : Remove unused dependencies
-    apt: autoremove=true
+  apt: autoremove=true
 
 - name : Clean Up Cache
-    apt: autoclean=true
+  apt: autoclean=true
 
 - name: Install a list of packages
-    apt:
-      pkg:
-        - stow
-        - borgbackup
-        - zip
-        - tree
-        - vim
-        - net-tools
-        - curl
-        - wget
-        - netstat
-        - zsh
-        - git
-        - sudo
-        - dns-utils
-        - whois
-        - nftables
-        - mtr-tiny
-        - tmux
-        - gnupg2
+  apt:
+    pkg:
+      - stow
+      - borgbackup
+      - zip
+      - tree
+      - vim
+      - net-tools
+      - curl
+      - wget
+      - zsh
+      - git
+      - sudo
+      - dnsutils
+      - tcpdump
+      - whois
+      - nftables
+      - mtr-tiny
+      - tmux
+      - gnupg2
 

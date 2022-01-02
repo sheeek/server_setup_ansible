@@ -1,0 +1,25 @@
+---
+
+- name: Check if dotfiles directory exists
+  stat:
+    path: "{{ dotfilePath }}"
+  register: dotfiles
+
+- name: Echo if dotfiles exist
+  debug:
+    msg: "The .dotfiles folder exits already"
+  when: dotfiles.stat.exists == true
+
+- name: create a dotfiles directory in $HOME
+  file:
+    path: "{{ dotfilePath }}"
+    state: directory
+  when: dotfiles.stat.exists == false
+
+- name: clone dotfiles from github repo
+  git:
+    repo: https://github.com/sheeek/dotfiles.git 
+    dest: "{{ dotfilePath }}"
+
+- name: stow the relevant files
+  ansible.builtin.shell: cd && cd .dotfiles && stow vim

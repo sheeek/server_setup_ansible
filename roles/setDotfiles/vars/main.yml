@@ -1,0 +1,4 @@
+---
+# Path for the dotfile folder
+dotfilePath: ~/.dotfiles
+homePath: $HOME
