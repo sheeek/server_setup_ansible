@@ -4,4 +4,4 @@
   roles:
     - installPackages
     - setDotfiles
-    - setOhMyZsh
+    - setOhMyZsH
