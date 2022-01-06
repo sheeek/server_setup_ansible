@@ -30,4 +30,5 @@
       - mtr-tiny
       - tmux
       - gnupg2
-
+      - pwgen
+      - subnetcalc
