@@ -4,7 +4,7 @@ Repo for setting up new server with ansible
 
 ## Prerequisites
 
-Install ansible with `apt install ansible` 
+Install ansible and git with `apt install ansible git` 
 
 ## Usage
 
